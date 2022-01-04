@@ -1,7 +1,5 @@
 body{
   margin: 0;
-  width: 501px;
-  height: 60px;
 }
 
 a {
@@ -10,11 +8,16 @@ a {
 
 .navbar{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: 501px;
   height: 60px;
   background-color: #045D8B;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.navbar a{
+  color: white;
 }
 
 .navbar_toggleBtn{
@@ -36,18 +39,44 @@ a {
   
 }
 
-#login{
+/* #login{
+
+} */
+
+.navbar-menu {
+  width: 30%;
+  height: 100%; 
+  background-color: #CFDAFF;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
 
 }
 
+.navbar-menu p {
+  color: black;
+  padding: 15px 15px;
+  border-bottom: 1.5px solid #045D8B;
+
+}
+
+.active {
+  display: flex;
+}
+
+/* 등록하기 정렬문제 해결
+a 태그자체만으로 정렬 시도를 한 것이 문제
+감싸고 있는 div 태그를 건드니리까 해결됨 */
 .first{
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 10px 30px;
 }
 
-.register{
-  display: block;
-  text-align: center;
+.first a {
+  color : black;
 }
 
 .context{
@@ -55,13 +84,13 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-
+  padding-bottom: 30px;
 }
 
 .inner {
   border: 1px solid black;
   border-bottom: 0px;
-  padding: 10px 20px;
+  padding: 15px 50px;
 }
 
 .inner:first-child{
@@ -87,6 +116,6 @@ a {
 }
 
 .nextNum a {
-  padding: 5px;
+  padding: 3px 10px;
   border: 1px solid black;
 }
