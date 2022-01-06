@@ -6,7 +6,7 @@ a {
   text-decoration: none;
 }
 
-.navbar{
+.nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +16,7 @@ a {
   padding-right: 30px;
 }
 
-.navbar a{
+.nav a{
   color: white;
 }
 
@@ -38,10 +38,6 @@ a {
   display: flex;
   
 }
-
-/* #login{
-
-} */
 
 .navbar-menu {
   width: 30%;
@@ -122,6 +118,7 @@ a 태그자체만으로 정렬 시도를 한 것이 문제
 
 
 
+
 /* 로그인 페이지 */
 
 .login_body{
@@ -150,85 +147,4 @@ a 태그자체만으로 정렬 시도를 한 것이 문제
   margin: 10px 20px;
   background-color: #045D8B;
   color: white;
-}
-
-
-
-
-/* 글쓰기 페이지 */
-.writing_body{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 35px;
-  width: 50%;
-  height: 460px;
-
-  border-radius: 10px;
-  border: 1px solid black;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.writing_board {
-  border: 1px solid black;
-  width: 70%;
-  height: 15%;
-  margin-bottom: 15px;
-  padding-left: 10px;
-  box-sizing: border-box;
-}
-
-.writing_title {
-  border: 1px solid black;
-  width: 70%;
-  height: 15%;
-  margin-bottom: 15px;
-  padding-left: 10px;
-  box-sizing: border-box;
-
-}
-
-.writing_content {
-  border: 1px solid black;
-  width: 70%;
-  height: 50%;
-  box-sizing: border-box;
-  padding-left: 10px;
-
-}
-
-.writing_btn {
-  border: 1px solid black;
-  position: absolute;
-  padding: 3px;
-  right: 150px;
-  bottom: 50px;
-}
-
-
-
-
-
-/* 글쓰기 상세 */
-
-.detail_head {
-
-}
-
-.detail_head1 {
-  position: absolute;
-  left: 420px;
-  top: 90px;
-  font-size: 14px;
-}
-
-.detail_head2 {
-  position: absolute;
-  right: 420px;
-  top: 90px;
-  font-size: 14px;
 }
