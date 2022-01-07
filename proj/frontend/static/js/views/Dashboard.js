@@ -7,16 +7,6 @@ export default class extends AbstractView {
   }
 
   async getHtml() {
-    // return `
-    //         <h1>Welcome back, Dom</h1>
-    //         <p>
-    //             Fugiat voluptate et nisi Lorem cillum anim sit do eiusmod occaecat irure do. Reprehenderit anim fugiat sint exercitation consequat. Sit anim laborum sit amet Lorem adipisicing ullamco duis. Anim in do magna ea pariatur et.
-    //         </p>
-    //         <p>
-    //             <a href="/posts" data-link>View recent posts</a>.
-    //         </p>
-    //     `;
-
     return `
             <div class = "navbar-menu">
               <p>자유 게시판</p>
@@ -28,7 +18,7 @@ export default class extends AbstractView {
 
             <div class = "first">
               <p>자유게시판</p>
-                <a href="">등록하기</a>
+                <a href="/writing">등록하기</a>
               </div>
             </div>
 

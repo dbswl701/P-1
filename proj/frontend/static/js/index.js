@@ -3,6 +3,8 @@ import Menu from "./views/Menu.js";
 import Settings from "./views/Settings.js";
 import LogIn from "./views/LogIn.js";
 import SignUp from "./views/SignUp.js";
+import Writing from "./views/Writing.js";
+import Writing_detail from "./views/Writing_detail.js";
 
 
 const navigateTo = url => {
@@ -18,6 +20,8 @@ const router = async () => {
     { path: "/settings", view: Settings },
     { path: "/login", view: LogIn },
     { path: "/singup", view: SignUp },
+    { path: "/writing", view: Writing },
+    { path: "/writing_detail", view: Writing_detail },
 
   ];
   
