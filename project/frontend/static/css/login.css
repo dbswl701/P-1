@@ -1,0 +1,29 @@
+/* 로그인 페이지 */
+
+.login_body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 5px solid black; */
+  margin-top: 100px;
+}
+
+.ID_content {
+  border: 1px solid black;
+  padding: 20px 75px;
+  margin: 30px 70px;
+}
+
+.sign {
+  display: flex;
+  flex-direction: row;
+}
+
+.sign a {
+  border: 1px solid black;
+  padding: 5px 30px;
+  margin: 10px 20px;
+  background-color: #045D8B;
+  color: white;
+}

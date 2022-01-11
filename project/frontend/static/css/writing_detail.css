@@ -1,0 +1,19 @@
+/* 글쓰기 상세 */
+
+/* .detail_head {
+
+} */
+
+.detail_head1 {
+  position: absolute;
+  left: 420px;
+  top: 90px;
+  font-size: 14px;
+}
+
+.detail_head2 {
+  position: absolute;
+  right: 420px;
+  top: 90px;
+  font-size: 14px;
+}
