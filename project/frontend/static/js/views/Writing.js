@@ -9,18 +9,18 @@ export default class extends AbstractView {
   async getHtml(){
     return `
     <section>
-    <div class = "writing_body">
-      <div class = "writing_board">
-        <p>게시판을 선택해주세요</p>
-      </div>
-      <div class = "writing_title">
-        <p>제목을 입력해 주세요</p>
-      </div>
-      <div class = "writing_content">
-        <p>내용</p>
-      </div>
-    </div>
-    <a href="/writing_detail" class="writing_btn" data-link>글쓰기</a>
+    <form class = "writing_body">
+      <select class = "writing_board">
+        <option  value="ktx">KTX</option>
+        <option value="itx">ITX 새마을</option>
+        <option value="mugung">무궁화호</option>
+      </select>
+
+      <input type="text" name = "title" value="제목을 입력해 주세요">
+      <textarea name="description" placeholder="내용"></textarea>
+      <input type = "submit" value="글쓰기" data-link>
+
+    </form>
   </section>
     `;
   }
