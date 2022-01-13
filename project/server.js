@@ -1,21 +1,44 @@
 // express server
 // express 모듈 불러오기
 const express = require("express");
+const { request } = require("http");
 const path = require("path");
+const db = require(__dirname+ '/mysql');
+
+
 
 // express 사용
 const app = express();
 
 // express.static 미들웨어 사용
-// 이미지, css, js 파일과 같은 정적 파일을 제공하기 위해 express의 기본 미들웨어 함수인 express.static 사용
-// server.js의 실행경로 + '/static'을 localhost:port/static으로 마운트
-// 쨌든 이렇게 해서 /static 경로를 통해 fronted 디렉토리에 포함된 파일을 로드할 수 있게 된다.
 app.use("/static", express.static(path.resolve(__dirname, "frontend", "static")));
 
 app.get("/*", (req, res) => {
-  // path.resolve는 인자들을 합해서 하나의 경로로 만들어준다.
-  // path.resolve는 /를 절대경로로, path.join은 상대경로로 처리한다.
+
   res.sendFile(path.resolve("frontend", "index.html"));
+});
+
+
+app.get("/", function(req, res){ // 메인페이지(/)에 있을 때 db정보를 얻어오고 싶었는데 몇시간을 다시 해봐도 정보를 얻지 못한다....
+  // 분명히 .connect로 확인하면 잘 들어가있고 연결도 잘 된 것 같은데,,,,
+  console.log("!!!!!"); // 이것도 안나오는거 보니까 접근방법 자체가 틀렸나보다 post방식으로 처리해봐도 나오지 않는데 일단 맑은 정신으로 내일 다시 봐야할 듯
+  db.query(`SELECT * FROM topic`, function(error, topics){
+    if(error){
+      console.log(error);
+    }
+    console.log(topics);
+  });
+// -> 아 다시 생각해보니 다른 코드에서 연습한다고 form 주구장창 했었는데 여기선 아직  아 그건 아니겠구나
+// 그냥 자고 조금 더 맑은정신에서 파일 전체로 다 엎어야 할 듯
+
+  // console.log('????');
+  // db.query(`SELECT * FROM topic`, function(error, topics){
+  //   if(error){
+  //     console.log(error);
+  //   }
+  //   console.log(topics);
+
+  // });
 });
 
 // port 생성 서버 실행
